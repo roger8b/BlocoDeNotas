@@ -22,9 +22,9 @@ Demonstrando o uso do banco de dados SQLite para persistência de dados no andro
 
 |                       Home Lista Vazia                       |                          Home Lista                          |                        Visualiza Nota                        |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| https://github.com/roger8b/BlocoDeNotas/blob/master/images/home_1.png | https://github.com/roger8b/BlocoDeNotas/blob/master/images/home_2.png | https://github.com/roger8b/BlocoDeNotas/blob/master/images/home_3.png |
+| <img src="https://github.com/roger8b/BlocoDeNotas/blob/master/images/home_1.png" width="250" /> | <img src="https://github.com/roger8b/BlocoDeNotas/blob/master/images/home_2.png" width="250" /> | <img src="https://github.com/roger8b/BlocoDeNotas/blob/master/images/home_3.png" width="250" /> |
 |                      **Adicionar Nota**                      |                      **Atualizar Nota**                      |                                                              |
-| https://github.com/roger8b/BlocoDeNotas/blob/master/images/new_note_1.png | https://github.com/roger8b/BlocoDeNotas/blob/master/images/update_note_1.png |                                                              |
+| <img src="https://github.com/roger8b/BlocoDeNotas/blob/master/images/new_note_1.png" width="250" /> | <img src="https://github.com/roger8b/BlocoDeNotas/blob/master/images/update_note_1.png" width="250" /> |                                                              |
 |                                                              |                                                              |                                                              |
 
 
