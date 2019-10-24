@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:background">@color/buttonBackground</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="android:layout_marginStart">@dimen/standard_side_margin</item>
+        <item name="android:layout_marginEnd">@dimen/standard_side_margin</item>
+    </style>
+
+    <style name="TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginStart">@dimen/standard_side_margin</item>
+        <item name="android:layout_marginEnd">@dimen/standard_side_margin</item>
+    </style>
+
+    <style name="TextInput.Title" parent="Widget.AppCompat.EditText">
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="TextInput.Note" parent="Widget.AppCompat.EditText">
+        <item name="android:gravity">top|left</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <style name="TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginStart">@dimen/standard_side_margin</item>
+        <item name="android:layout_marginEnd">@dimen/standard_side_margin</item>
+    </style>
+
+    <style name="TextView.Title" parent="TextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+    <style name="TextView.Content" parent="TextView">
+        <item name="android:textSize">@dimen/subtitle</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="TextView.Data" parent="TextView">
+        <item name="android:textSize">@dimen/data</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+
+    <color name="buttonText">#FFFFFF</color>
+</resources>

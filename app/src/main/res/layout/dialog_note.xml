@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/note_title"
+        style="@style/TextView.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_side_margin"
+        android:layout_marginTop="@dimen/standard_top_margin"
+        android:layout_marginEnd="@dimen/standard_side_margin"
+        toos:text="Titulo" />
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/TextView.Content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_side_margin"
+        android:layout_marginTop="@dimen/standard_top_margin"
+        android:layout_marginEnd="@dimen/standard_side_margin"
+        toos:text="Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! In elementis mé pra quem é amistosis quis leo. Interagi no mé, cursus quis, vehicula ac nisi. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per." />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/TextView.Data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_top_margin"
+        android:layout_marginEnd="@dimen/standard_side_margin"
+        toos:text="24/10/2019 14:00:00" />
+
+</LinearLayout>

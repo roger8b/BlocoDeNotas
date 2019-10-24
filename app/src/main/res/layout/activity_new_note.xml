@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewNoteActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_title_layout"
+        style="@style/TextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_top_margin"
+        android:layout_marginBottom="@dimen/new_note_distance_between_title_and_note"
+        android:hint="@string/label_title"
+        app:layout_constraintBottom_toTopOf="@id/input_note_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_title"
+            style="@style/TextInput.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_note_layout"
+        style="@style/TextInput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/standard_distance_between_widgets"
+        android:hint="@string/label_note"
+        app:layout_constraintBottom_toTopOf="@id/bt_save_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_title_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_note"
+            style="@style/TextInput.Note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bt_save_note"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_bottom_margin"
+        android:text="@string/bt_save_note_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_note_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
