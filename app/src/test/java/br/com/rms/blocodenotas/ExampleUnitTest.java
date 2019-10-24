@@ -1,4 +1,4 @@
-package br.com.rms.atividade2;
+package br.com.rms.blocodenotas;
 
 import org.junit.Test;
 

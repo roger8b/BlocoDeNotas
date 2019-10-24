@@ -1,4 +1,4 @@
-package br.com.rms.atividade2.database;
+package br.com.rms.blocodenotas.database;
 
 import android.provider.BaseColumns;
 

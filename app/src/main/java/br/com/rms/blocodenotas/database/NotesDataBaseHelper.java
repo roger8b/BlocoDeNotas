@@ -1,4 +1,4 @@
-package br.com.rms.atividade2.database;
+package br.com.rms.blocodenotas.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,14 +9,14 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-import br.com.rms.atividade2.pojo.Note;
-import br.com.rms.atividade2.utils.UtilsDate;
+import br.com.rms.blocodenotas.pojo.Note;
+import br.com.rms.blocodenotas.utils.UtilsDate;
 
-import static br.com.rms.atividade2.database.NotesDataBaseContract.Notes.COLUMN_DATA;
-import static br.com.rms.atividade2.database.NotesDataBaseContract.Notes.COLUMN_ID;
-import static br.com.rms.atividade2.database.NotesDataBaseContract.Notes.COLUMN_NOTE;
-import static br.com.rms.atividade2.database.NotesDataBaseContract.Notes.COLUMN_TITLE;
-import static br.com.rms.atividade2.database.NotesDataBaseContract.Notes.TABLE_NAME;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_DATA;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_ID;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_NOTE;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_TITLE;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.TABLE_NAME;
 
 public class NotesDataBaseHelper {
 

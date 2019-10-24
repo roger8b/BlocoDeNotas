@@ -1,4 +1,4 @@
-package br.com.rms.atividade2.utils;
+package br.com.rms.blocodenotas.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

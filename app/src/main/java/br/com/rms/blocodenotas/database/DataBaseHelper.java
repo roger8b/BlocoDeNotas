@@ -1,4 +1,4 @@
-package br.com.rms.atividade2.database;
+package br.com.rms.blocodenotas.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import static br.com.rms.atividade2.database.NotesDataBaseContract.SQL_CREATE_NOTES_TABLE;
-import static br.com.rms.atividade2.database.NotesDataBaseContract.SQL_DELETE_NOTES_TABLE;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.SQL_CREATE_NOTES_TABLE;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.SQL_DELETE_NOTES_TABLE;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 

@@ -1,4 +1,4 @@
-package br.com.rms.atividade2;
+package br.com.rms.blocodenotas;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,10 +6,10 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import br.com.rms.atividade2.database.NotesDataBaseHelper;
-import br.com.rms.atividade2.pojo.Note;
+import br.com.rms.blocodenotas.database.NotesDataBaseHelper;
+import br.com.rms.blocodenotas.pojo.Note;
 
-import static br.com.rms.atividade2.MainActivity.NOTE;
+import static br.com.rms.blocodenotas.MainActivity.NOTE;
 
 public class UpdateNoteActivity extends AppCompatActivity {
 

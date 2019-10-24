@@ -1,4 +1,4 @@
-package br.com.rms.atividade2;
+package br.com.rms.blocodenotas;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,8 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-import br.com.rms.atividade2.database.NotesDataBaseHelper;
-import br.com.rms.atividade2.pojo.Note;
+import br.com.rms.blocodenotas.database.NotesDataBaseHelper;
+import br.com.rms.blocodenotas.pojo.Note;
 
 public class MainActivity extends AppCompatActivity {
 

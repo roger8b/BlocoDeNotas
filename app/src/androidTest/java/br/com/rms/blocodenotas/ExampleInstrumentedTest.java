@@ -1,4 +1,4 @@
-package br.com.rms.atividade2;
+package br.com.rms.blocodenotas;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("br.com.rms.atividade2", appContext.getPackageName());
+        assertEquals("br.com.rms.blocodenotas", appContext.getPackageName());
     }
 }

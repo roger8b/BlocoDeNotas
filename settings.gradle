@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='Atividade2'
+rootProject.name='BlocoDeNotas'

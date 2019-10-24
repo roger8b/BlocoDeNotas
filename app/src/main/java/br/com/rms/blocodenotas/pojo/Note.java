@@ -1,4 +1,4 @@
-package br.com.rms.atividade2.pojo;
+package br.com.rms.blocodenotas.pojo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
