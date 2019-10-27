@@ -14,7 +14,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String DATA_BASE_NAME = "Notes.db";
     private static final int DATA_BASE_VERSION = 1;
 
-    DataBaseHelper(@Nullable Context context) {
+    public DataBaseHelper(@Nullable Context context) {
         super(context, DATA_BASE_NAME, null, DATA_BASE_VERSION);
     }
 

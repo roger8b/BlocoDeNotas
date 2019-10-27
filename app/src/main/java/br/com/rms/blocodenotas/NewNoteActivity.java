@@ -7,17 +7,25 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.rms.blocodenotas.database.NotesDataBaseHelper;
+import br.com.rms.blocodenotas.servicelocator.ServiceLocator;
 
 public class NewNoteActivity extends AppCompatActivity {
 
     EditText inputTitle;
     EditText inputNote;
     Button buttonSaveNote;
+    NotesDataBaseHelper dataBaseHelper;
+    ServiceLocator serviceLocator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_note);
+
+        setTitle(R.string.label_create_note);
+
+        serviceLocator = ((App) getApplication()).service;
+        dataBaseHelper = serviceLocator.get(NotesDataBaseHelper.class);
 
         setupButtonSaveNote();
         setupInputTitle();
@@ -41,7 +49,7 @@ public class NewNoteActivity extends AppCompatActivity {
         String title = inputTitle.getText().toString();
         String note = inputNote.getText().toString();
         if (validateData(title, note)) {
-            boolean noteHasBeenInserted = new NotesDataBaseHelper(this).insertNote(title, note);
+            boolean noteHasBeenInserted = dataBaseHelper.insertNote(title, note);
 
             if (noteHasBeenInserted) {
                 cleanForm();

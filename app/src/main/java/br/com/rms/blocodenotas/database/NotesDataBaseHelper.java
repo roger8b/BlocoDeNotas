@@ -1,7 +1,6 @@
 package br.com.rms.blocodenotas.database;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,18 +12,18 @@ import br.com.rms.blocodenotas.pojo.Note;
 import br.com.rms.blocodenotas.utils.UtilsDate;
 
 import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_DATA;
-import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_ID;
 import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_NOTE;
 import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.COLUMN_TITLE;
 import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes.TABLE_NAME;
+import static br.com.rms.blocodenotas.database.NotesDataBaseContract.Notes._ID;
 
 public class NotesDataBaseHelper {
 
     private static final long ERROR_ID = -1;
     private SQLiteDatabase db;
 
-    public NotesDataBaseHelper(Context context) {
-        db = new DataBaseHelper(context).getReadableDatabase();
+    public NotesDataBaseHelper(DataBaseHelper dataBaseHelper) {
+        this.db = dataBaseHelper.getReadableDatabase();
     }
 
     public boolean insertNote(String title, String note) {
@@ -52,7 +51,7 @@ public class NotesDataBaseHelper {
 
     public Boolean deleteNote(Note note, ArrayList<Note> list) {
         boolean noteHasBeenDeleted = false;
-        String whereClause = COLUMN_ID + " = " + note.getId();
+        String whereClause = _ID + " = " + note.getId();
         int deleteResult = db.delete(TABLE_NAME, whereClause, null);
         if (deleteResult != 0) {
             list.remove(note);
@@ -63,11 +62,13 @@ public class NotesDataBaseHelper {
 
     public boolean updateNote(Note note) {
         boolean noteHasBeenUpdated = false;
-        String whereClause = COLUMN_ID + " = " + note.getId();
+        String whereClause = _ID + " = " + note.getId();
+
         ContentValues values = new ContentValues();
         values.put(COLUMN_TITLE, note.getTitle());
         values.put(COLUMN_NOTE, note.getText());
         values.put(COLUMN_DATA, UtilsDate.getCurrentDateTime());
+
         int updateResult = db.update(
                 TABLE_NAME,
                 values,
@@ -94,7 +95,7 @@ public class NotesDataBaseHelper {
 
             while (cursor.moveToNext()) {
                 Note note = new Note(
-                        cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID)),
+                        cursor.getInt(cursor.getColumnIndexOrThrow(_ID)),
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE)),
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NOTE)),
                         cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATA)));

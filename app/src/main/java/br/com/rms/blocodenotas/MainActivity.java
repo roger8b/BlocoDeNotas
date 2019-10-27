@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import br.com.rms.blocodenotas.database.NotesDataBaseHelper;
 import br.com.rms.blocodenotas.pojo.Note;
+import br.com.rms.blocodenotas.servicelocator.ServiceLocator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,14 +30,15 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<Note> adapter;
     ArrayList<Note> list;
     NotesDataBaseHelper dataBaseHelper;
-
+    ServiceLocator serviceLocator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dataBaseHelper = new NotesDataBaseHelper(this);
+        serviceLocator = ((App) getApplication()).service;
+        dataBaseHelper = serviceLocator.get(NotesDataBaseHelper.class);
 
         setupButtonNewNote();
         setupNotesList();
@@ -44,9 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupButtonNewNote() {
         buttonNewNote = findViewById(R.id.bt_new_note);
-        buttonNewNote.setOnClickListener(v -> {
-            showNewNoteActivity();
-        });
+        buttonNewNote.setOnClickListener(v -> showNewNoteActivity());
     }
 
     private void setupNotesList() {

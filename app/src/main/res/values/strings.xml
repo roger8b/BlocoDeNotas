@@ -14,4 +14,6 @@
     <string name="erase_label">Apagar</string>
     <string name="error_message_title_field_is_required">Campo titulo é Obrigatorio</string>
     <string name="error_message_note_field_is_required">Campo nota é Obrigatorio</string>
+    <string name="label_create_note">Criar Nota</string>
+    <string name="label_edit_note">Editar nota</string>
 </resources>

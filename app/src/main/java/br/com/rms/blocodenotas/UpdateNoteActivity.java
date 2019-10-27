@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.rms.blocodenotas.database.NotesDataBaseHelper;
 import br.com.rms.blocodenotas.pojo.Note;
+import br.com.rms.blocodenotas.servicelocator.ServiceLocator;
 
 import static br.com.rms.blocodenotas.MainActivity.NOTE;
 
@@ -17,11 +18,18 @@ public class UpdateNoteActivity extends AppCompatActivity {
     EditText inputNote;
     Button buttonSaveNote;
     Note note;
+    NotesDataBaseHelper dataBaseHelper;
+    ServiceLocator serviceLocator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_note);
+
+        setTitle(R.string.label_edit_note);
+
+        serviceLocator = ((App) getApplication()).service;
+        dataBaseHelper = serviceLocator.get(NotesDataBaseHelper.class);
 
         note = (Note) getIntent().getParcelableExtra(NOTE);
 
@@ -57,7 +65,7 @@ public class UpdateNoteActivity extends AppCompatActivity {
             note.setTitle(title);
             note.setText(text);
 
-            boolean noteHasBeenInserted = new NotesDataBaseHelper(this).updateNote(note);
+            boolean noteHasBeenInserted = dataBaseHelper.updateNote(note);
 
             if (noteHasBeenInserted) {
                 setResult(RESULT_OK);
